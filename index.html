@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1px;
+        }
+        nav {
+            float: right;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jogo de moto</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="contact-link">Contato</a></li>
+                    <li><a href="#" id="about-link" onclick="window.open('https://www.motoguia.com.br/zero-km/cg-160-cargo')">Loja</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<center>
+    <div class="main-content">
+        <h2>MOTO start 160</h2>
+        <p>A CG 160 Cargo é a parceira perfeita para te acompanhar em qualquer situação. 
+            Prático, o seu painel é 100% digital e possibilita uma fácil leitura das informações durante a pilotagem, contando, ainda, com relógio, conta-giros e indicadores de combustível e hodômetro total e parcial.</p>
+        <p>Atalhos de teclado: <strong>CTRL + W</strong> para direcionar para Loja, <strong>CTRL + I</strong> para acessar o link original da imagem e <strong>CTRL + M</strong> para acessar a área de mensagem.</p>
+        <a href="#" id="image-link" onclick="window.open('https://www.motoguia.com.br/zero-km/cg-160-cargo')"> <img src="1.jpg" alt="Imagem" width="800"></a>
+        <br><br>
+        <input type="text" id="message-input" placeholder="Digite sua mensagem">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</center>
+    <footer>
+        Desenvolvido por: Alison Proença 
+    </footer>
+
+    <script>
+        // Script para atalhos de teclado
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'w') {
+                window.location.href = 'https://www.motoguia.com.br/zero-km/cg-160-cargo';
+            } else if (event.ctrlKey && event.key === 'i') {
+                window.open('https://www.honda.com.br/motos/street/city/cg-160-cargo#:~:text=A%20CG%20160%20Cargo%20é,e%20hodômetro%20total%20e%20parcial.');
+            } else if (event.ctrlKey && event.key === 'm') {
+                document.getElementById('message-input').focus();
+            }
+        });
+
+        function sendMessage() {
+            var message = document.getElementById('message-input').value;
+            // Aqui você pode adicionar o código para enviar a mensagem
+            alert('Mensagem enviada: ' + message);
+        }
+    </script>
+</body>
+</html>
